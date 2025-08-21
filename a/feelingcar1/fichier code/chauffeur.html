@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerie d'images</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f4f4f4;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 9px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+   transition: transform 0.5s ease;
+}
+.gallery :hover img{
+    transform: scale(1.05);
+
+}
+
+.carousel-item img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease;
+  border-radius: 9px;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05);
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  color: #fff;
+}
+
+.carousel-caption .btn {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+ 
+<div class="gallery">
+    <img src="OIP (1).jpg" alt="Image 1">
+    <img src="bn.jpg" alt="Image 2">
+    <img src="télécharger (1).webp" alt="Image 3">
+    <img src="télécharger (2).webp" alt="Image 4">
+    <img src="télécharger.webp" alt="Image 5">
+    <img src="Autoroute-Yaounde-Douala-Cameroun.jpg" alt="Image 6">
+    <!-- Ajoute autant d’images que tu veux -->
+  </div>
+ <div class="gallery">
+    <img src="OIP (1).jpg" alt="Image 1">
+    <img src="bn.jpg" alt="Image 2">
+    <img src="télécharger (1).webp" alt="Image 3">
+    <img src="télécharger (2).webp" alt="Image 4">
+    <img src="télécharger.webp" alt="Image 5">
+    <img src="Autoroute-Yaounde-Douala-Cameroun.jpg" alt="Image 6">
+    <!-- Ajoute autant d’images que tu veux -->
+  </div>
+   <div class="gallery">
+    <img src="OIP (1).jpg" alt="Image 1">
+    <img src="bn.jpg" alt="Image 2">
+    <img src="télécharger (1).webp" alt="Image 3">
+    <img src="télécharger (2).webp" alt="Image 4">
+    <img src="télécharger.webp" alt="Image 5">
+    <img src="Autoroute-Yaounde-Douala-Cameroun.jpg" alt="Image 6">
+    <!-- Ajoute autant d’images que tu veux -->
+  </div>
+  <div class="gallery">
+    <img src="OIP (1).jpg" class="d-block w-100"alt="Image 1">
+    <img src="bn.jpg"  class="d-block w-100" alt="Image 2">
+    <img src="télécharger (1).webp" class="d-block w-100" alt="Image 3">
+    <img src="télécharger (2).webp" class="d-block w-100" alt="Image 4">
+    <img src="télécharger.webp" class="d-block w-100" alt="Image 5">
+    <img src="Autoroute-Yaounde-Douala-Cameroun.jpg" class="d-block w-100" alt="Image 6">
+    <!-- Ajoute autant d’images que tu veux -->
+  </div>
+  <div class="carousel-item active">
+  <img src="OIP (1).jpg" class="d-block w-100" alt="Yaoundé">
+  <div class="carousel-caption d-none d-md-block">
+    <h5>Yaoundé</h5>
+    <p>Capitale politique et culturelle du Cameroun</p>
+    <a href="#reservation-yaounde" class="btn btn-warning">Réserver ce trajet</a>
+  </div>
+</div>
+
+ 
+</body>
+</html>
+
+
+

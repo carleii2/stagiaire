@@ -1,0 +1,173 @@
+
+.sct{
+display: flex;
+
+align-items: center;
+
+}
+.logo{
+    width:145px
+}
+nav{
+flex: 1;
+text-align: right;
+
+}
+ul{
+    display: inline-block;
+    list-style-type: none;
+}
+li{
+display: inline-block;
+margin-right: 20px;
+}
+.container{
+    max-width: 1300px;
+    margin: 20px auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    margin: 0;
+    font-family: arial,sans-serif;
+    background-color: #e0f0ff;
+    color: #333;
+}
+header{
+    background-color: #325ce7;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+nav a{
+    color: white;
+    margin:0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero{
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #E0F0FF;
+}
+.produits{
+    padding: 30px;
+    text-align: center;
+}
+.grid{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+.product{
+    background-color: white;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+.product img{
+    width: 100%;
+    border-radius: 5px;
+}
+footer{
+    text-align: center;
+    background-color: #0077cc;
+    color: white;
+    padding: 15px;
+}
+.button {
+    background-color: #c8f7c5;
+    text-align: center;
+    padding: 10px;
+}
+
+.button button {
+    background-color: #28a745;
+    color: white;
+
+}
+
+.button button:hover {
+    background-color: #218838;
+}
+@media screen and (max-width: 768px) {
+  .sct, header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .hero h2, .hero p, .produits h3 {
+    font-size: 1.2em;
+  }
+
+  footer {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}
+
+/* 💻 Pour les tablettes (entre 768px et 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .grid {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .product {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 10px;
+  }
+}

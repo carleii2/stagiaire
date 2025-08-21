@@ -1,0 +1,15 @@
+.carousel-item img {
+  height: 400px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.cv{
+  padding: 10px;
+  margin-top: 10px;
+  
+}
+
+
+             

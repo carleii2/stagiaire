@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Planning Hebdomadaire</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  body{
+    background-image: url(https://i.pinimg.com/736x/be/11/ba/be11ba6dc1153524376d9705c7a93391.jpg);
+    background-size: cover;       /* ou contain */
+  background-repeat: no-repeat; /* évite la répétition */
+  background-position: center;
+   }
+
+    .day-column {
+      min-height: 50px;
+      border: 1px solid #224263;
+      padding: 1rem;
+      background-color: #578abd;
+      border-radius: 10px;
+  
+    }
+    .day-header {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .nom{
+      height: 70px;
+    }
+  
+  
+  
+  </style>
+</head>
+<body>
+<nav class="navbar" class="loader">
+  <div class="logo"><img src="Logo-Tool-Advisor-1-1.png.webp" alt="" class="nom"></div>
+  <ul class="nav-links">
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">À propos</a></li>
+    </div>
+    <li><a href="#">Contact</a></li>
+     <li><a href="tachemensuel.html">tache mensuel</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar avec Profil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+.navba{
+  height: 70px;
+  border-radius: 10px;
+}
+.container-fluid{
+  background-color: #01274b;
+}
+.mb-4{
+  color: rgb(47, 53, 136);
+}
+</style>
+
+  <nav class="navba navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MonProfil</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Autres liens ici -->
+        </ul>
+
+        <!-- Menu Profil -->
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              👤 Profil
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><span class="dropdown-item-text"><strong>Nom :</strong> njawou</span></li>
+              <li><span class="dropdown-item-text"><strong>Email :</strong> n@gmail.com</span></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="inscription.html">Modifier le profil</a></li>
+              <li><a class="dropdown-item text-danger" href="connexion.html">Déconnexion</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+    </div>
+  </ul>
+</nav>
+<a class="navbar-brand" href="#">
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarContent">
+  <!-- liens ici -->
+</div>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Planning Hebdomadaire</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding: 20px; }
+    .day-column { min-height: 200px; border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; }
+    .task { margin-bottom: 5px; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mb-4">🗓️ Planning Hebdomadaire</h1>
+    <form id="taskForm" class="mb-4">
+      <div class="row g-2">
+        <div class="col-md-2">
+          <input type="text" id="taskInput" class="form-control" placeholder="Tâche" required>
+        </div>
+        <div class="col-md-2">
+          <select id="daySelect" class="form-select">
+            <option value="Lundi">Lundi</option>
+            <option value="Mardi">Mardi</option>
+            <option value="Mercredi">Mercredi</option>
+            <option value="Jeudi">Jeudi</option>
+            <option value="Vendredi">Vendredi</option>
+            <option value="Samedi">Samedi</option>
+            <option value="Dimanche">Dimanche</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <input type="time" id="startTime" class="form-control" required>
+        </div>
+        <div class="col-md-2">
+          <input type="time" id="endTime" class="form-control" required>
+        </div>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-primary w-100">Ajouter</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="row" id="week">
+      <script>
+        const days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+        document.write(days.map(day => `
+          <div class="col-md-4">
+            <div class="day-column" id="${day}">
+              <h5>${day}</h5>
+              <ul class="list-group" id="list-${day}"></ul>
+            </div>
+          </div>
+        `).join(''));
+      </script>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('taskForm');
+    const taskInput = document.getElementById('taskInput');
+    const daySelect = document.getElementById('daySelect');
+    const startTime = document.getElementById('startTime');
+    const endTime = document.getElementById('endTime');
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    function saveTasks() {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    function renderTasks() {
+      days.forEach(day => {
+        const list = document.getElementById(`list-${day}`);
+        list.innerHTML = "";
+        tasks.filter(t => t.day === day).forEach((t, index) => {
+          const li = document.createElement('li');
+          li.className = 'list-group-item d-flex justify-content-between align-items-center task';
+          li.innerHTML = `${t.text} 🕒 ${t.start} - ${t.end}
+            <button class="btn btn-sm btn-danger">Supprimer</button>`;
+          li.querySelector('button').addEventListener('click', () => {
+            tasks.splice(tasks.indexOf(t), 1);
+            saveTasks();
+            renderTasks();
+          });
+          list.appendChild(li);
+        });
+      });
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const task = taskInput.value;
+      const day = daySelect.value;
+      const start = startTime.value;
+      const end = endTime.value;
+
+      const newTask = { text: task, day, start, end };
+      tasks.push(newTask);
+      saveTasks();
+      renderTasks();
+      form.reset();
+
+      if (Notification.permission === "granted") {
+        new Notification(`Tâche ajoutée pour ${day}`, { body: `${task} de ${start} à ${end}` });
+      }
+    });
+
+    // Rappel automatique toutes les minutes
+    setInterval(() => {
+      const now = new Date();
+      const currentTime = now.toTimeString().slice(0, 5);
+      const currentDay = days[now.getDay() === 0 ? 6 : now.getDay() - 1];
+
+      tasks.forEach(t => {
+        if (t.day === currentDay && t.start === currentTime) {
+          if (Notification.permission === "granted") {
+            new Notification(`⏰ Rappel`, { body: `${t.text} commence maintenant !` });
+          }
+        }
+      });
+    }, 60000);
+
+    if ("Notification" in window && Notification.permission !== "granted") {
+      Notification.requestPermission();
+    }
+
+    renderTasks();
+  </script>
+  <script>
+    
+  </script>
+  <footer>&copy;gerer vos taches hebdomadaire</footer>
+</body>
+</html>

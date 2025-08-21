@@ -1,0 +1,16 @@
+fieldset{
+    width:300px;
+    height: 460spx;
+    border-radius: 30px;
+
+}
+button{
+    background-color: turquoise;
+    width: 300px;
+    height: 40px;
+}input{
+width: 270px;
+height: 30px;
+border-block-color:  rgb(225, 238, 225);    
+
+}

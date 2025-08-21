@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plateforme Médicale - Lloris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Plateforme Médicale 🩺</h1>
+    <nav>
+      <button onclick="afficherSection('accueil', event)">Accueil</button>
+      <button onclick="afficherSection('consultation', event)">Consultation</button>
+      <button onclick="afficherSection('rendezvous', event)">Rendez-vous</button>
+      <button onclick="afficherSection('connexion', event)">Connexion</button>
+    </nav>
+    <button id="toggleDarkMode">🌙 Mode sombre</button>
+  </header>
+
+  <main>
+    <!-- Accueil -->
+    <section id="accueil" class="section active">
+      <h2>Analyse de symptômes</h2>
+      <input type="text" id="symptomeInput" placeholder="Ex: fièvre, toux, fatigue...">
+      <button onclick="rechercherMaladie()">Rechercher</button>
+      <button onclick="resetRecherche()">Réinitialiser</button>
+      <div id="resultats"></div>
+    </section>
+
+    <!-- Consultation -->
+    <section id="consultation" class="section">
+      <h2>Programmer une consultation</h2>
+      <form id="formRdv">
+        <input type="text" id="rdvPatient" placeholder="Nom du patient" required>
+        <input type="datetime-local" id="rdvDate" required>
+        <button type="submit">Valider la consultation</button>
+      </form>
+      <div id="confirmationRdv"></div>
+    </section>
+
+    <!-- Rendez-vous -->
+    <section id="rendezvous" class="section">
+      <h2>📅 Liste des rendez-vous</h2>
+      <div id="listeRdv"></div>
+    </section>
+
+    <!-- Connexion -->
+    <section id="connexion" class="section">
+      <h2>Connexion Médecin</h2>
+      <form id="formLogin">
+        <input type="text" id="loginUsername" placeholder="Nom d'utilisateur" required>
+        <input type="password" id="loginPassword" placeholder="Mot de passe" required>
+        <button type="submit">Se connecter</button>
+      </form>
+      <button onclick="afficherSection('inscription', event)">S'inscrire</button>
+      <div id="messageLogin"></div>
+    </section>
+
+    <!-- Inscription -->
+    <section id="inscription" class="section">
+      <h2>Inscription Médecin</h2>
+      <form id="formInscription">
+        <input type="text" id="nomPrenom" placeholder="Nom et prénom" required>
+        <input type="text" id="contact" placeholder="Téléphone ou e-mail" required>
+        <input type="text" id="specialite" placeholder="Spécialité médicale" required>
+        <input type="text" id="nouveauUsername" placeholder="Nom d'utilisateur" required>
+        <input type="password" id="nouveauPassword" placeholder="Mot de passe" required>
+        <button type="submit">Créer le compte</button>
+      </form>
+      <div id="messageInscription"></div>
+    </section>
+
+    <!-- Profil -->
+    <section id="profil" class="section">
+      <h2>👤 Profil Médecin</h2>
+      <div id="infosProfil"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

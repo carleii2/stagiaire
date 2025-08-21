@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Réservation & Paiement</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+  <h2>Payer une réservation</h2>
+  <form id="paymentForm">
+    <div class="mb-3">
+      <label for="clientPhone" class="form-label">Votre numéro Orange Money</label>
+      <input type="tel" class="form-control" id="clientPhone" required placeholder="Ex: 690123456">
+    </div>
+    <div class="mb-3">
+      <label for="amount" class="form-label">Montant à payer (FCFA)</label>
+      <input type="number" class="form-control" id="amount" required min="100">
+    </div>
+    <button type="submit" class="btn btn-success">Simuler le paiement</button>
+  </form>
+
+  <div id="response" class="mt-4"></div>
+
+  <script>
+    const gerantPhone = "699112233"; // Numéro du gérant
+
+    document.getElementById('paymentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const clientPhone = document.getElementById('clientPhone').value;
+      const amount = document.getElementById('amount').value;
+
+      // Simulation du paiement
+      const message = `
+        ✅ Paiement executer avec succès !<br>
+        🔁 Transfert de <strong>${amount} FCFA</strong> depuis <strong>${clientPhone}</strong><br>
+        📤 Vers le chauffeur au <strong>${gerantPhone}</strong><br>
+        🕒 Date : ${new Date().toLocaleString()}
+      `;
+
+      document.getElementById('response').innerHTML =
+        `<div class="alert alert-info">${message}</div>`;
+    });
+  </script>
+</body>
+</html>

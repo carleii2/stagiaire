@@ -1,0 +1,120 @@
+button {
+    background-color: rgb(88, 176, 235);
+}
+
+body {
+    margin-left: 10px;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: arial;
+}
+
+.container {
+    width: 220px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    margin: 50px;
+    display: inline-block;
+    /* vertical-align: top; */
+}
+
+.image {
+    background-color: #d0f0fd;
+    padding: 10px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.name {
+    background-color: #ffe6cc;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.price {
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+.button {
+    background-color: #c8f7c5;
+    text-align: center;
+    padding: 10px;
+}
+
+.button button {
+    background-color: #28a745;
+    color: white;
+
+}
+
+.button button:hover {
+    background-color: #218838;
+}
+
+.tab {
+    height: 500px;
+}
+
+.pct {
+    display: flex;
+}
+
+.cdl{
+    position: relative;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.navigation {
+    position: absolute;
+    display: inline-block;
+    margin-left: 40%;
+
+}
+
+ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header {
+    position: relative;
+    background-color: #325ce7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    align-items: center;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.cadre {
+    padding-top: 75px;
+}

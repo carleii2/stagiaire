@@ -1,0 +1,122 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00aaff;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #00aaff;
+    }
+    search-bar button:hover {
+      background-color: #008ecc;
+    }
+
+
+    /* Hero section */
+    .hero {
+      background-image:url("C:\Users\LENOVO\Documents\Nouveau dossier\Autoroutes-du-Cameroun-Kribi-Lalobe.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+
+    }
+    .hero {
+      background-image: url("C:\Users\LENOVO\Documents\Nouveau dossier\Autoroutes-du-Cameroun-Kribi-Lalobe.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      padding: 0 20px;
+    }
+    text-align: center;
+      padding: 0 20px;
+    }
+
+    /* Search bar */
+    .search-bar {
+      background: white;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    .search-bar input, .search-bar button {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .search-bar button {
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+
+    .search-bar {
+      background: white;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+    .search-bar input, .search-bar button {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+search-bar button {
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .search-bar button:hover {
+      background-color: #008ecc;
+    }
+  

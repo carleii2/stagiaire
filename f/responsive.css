@@ -1,0 +1,86 @@
+body {
+    padding: 10px;
+}
+
+.sct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+.produits .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product {
+    width: 100%;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2,
+h3,
+h4,
+p {
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 10px;
+}
+
+
+nav ul {
+    display: none;
+    /* Masquer le menu par défaut */
+    flex-direction: column;
+    background-color: #325ce7;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul.show {
+    display: flex;
+    /* Afficher le menu quand activé */
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+.menu-toggle {
+    display: block;
+    background-color: #325ce7;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
