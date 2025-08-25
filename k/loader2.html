@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'segeo UI', sans-serif;
+    }
+    .loader-container{
+        position: relative;
+        text-align: center;
+    }
+    .loader-texte{
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        animation: pulse 2s infinite;
+    }
+    .circle-loader{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        margin: -60px;
+        border: 6px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top: 6px solid white;
+        animation: spin 1.5s linear infinite;
+    }
+    @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1);}
+        50% { opacity: 0.6; transform: scale(1.05);}
+    }
+</style>
+<body>
+    <div class="loader-container">
+<div class="circle-loader"></div>
+<div class="loader-texte">Tacheyuni</div>
+    </div>
+    <script>
+        setTimeout(() =>{
+             window.location.href = "ind.html"
+        },
+    2000);
+    </script>
+</body>
+</html>

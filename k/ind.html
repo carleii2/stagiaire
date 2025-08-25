@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <title>Planning Hebdomadaire</title>
   <link rel="stylesheet" href="navbar.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./Booststrap_boot_1/css/bootstrap.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body{
-    background-image: url(https://i.pinimg.com/736x/be/11/ba/be11ba6dc1153524376d9705c7a93391.jpg);
+    background-image: url(aa3b9ab4-29c5-4db6-839f-2a08d165e8b3.jpeg);
     background-size: cover;       /* ou contain */
   background-repeat: no-repeat; /* évite la répétition */
   background-position: center;
+  
    }
 
     .day-column {
@@ -30,63 +32,32 @@
       height: 70px;
     }
   
-  
+  .navbar{
+    height: 80px;
+    border-radius: 10px;
+  }
   
   </style>
-</head>
-<body>
-<nav class="navbar" class="loader">
-  <div class="logo"><img src="Logo-Tool-Advisor-1-1.png.webp" alt="" class="nom"></div>
-  <ul class="nav-links">
-    <li><a href="#">Accueil</a></li>
-    <li><a href="#">À propos</a></li>
-    </div>
-    <li><a href="#">Contact</a></li>
-     <li><a href="tachemensuel.html">tache mensuel</a></li>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Navbar avec Profil</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<style>
-.navba{
-  height: 70px;
-  border-radius: 10px;
-}
-.container-fluid{
-  background-color: #01274b;
-}
-.mb-4{
-  color: rgb(47, 53, 136);
-}
-</style>
-
-  <nav class="navba navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">MonProfil</a>
+      <a class="navbar-brand" href="#">🗓Mon Agenda</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- Autres liens ici -->
-        </ul>
-
-        <!-- Menu Profil -->
-        <ul class="navbar-nav">
+          <!-- Menu déroulant -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              👤 Profil
+              Options
             </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><span class="dropdown-item-text"><strong>Nom :</strong> njawou</span></li>
-              <li><span class="dropdown-item-text"><strong>Email :</strong> n@gmail.com</span></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="inscription.html">Modifier le profil</a></li>
-              <li><a class="dropdown-item text-danger" href="connexion.html">Déconnexion</a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="loader3.html" onclick="afficherTache('hebdo')">Tâche mensuel</a></li>
+              <li><a class="dropdown-item" href="apropos.html" onclick="afficherTache('jour')">A propos</a></li>
+              <li><a class="dropdown-item" href="contact.html" onclick="afficherTache('tous')">Contact</a></li>
+               <li><a class="dropdown-item" href="moncompte.html" onclick="afficherTache('tous')">Mon compte</a></li>
             </ul>
           </li>
         </ul>
@@ -94,11 +65,22 @@
     </div>
   </nav>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+   
+  
+   
+  <script src="./Booststrap_boot_1/js/bootstrap.js"></script>
+  <script>
+    function afficherTache(type) {
+      const contenu = document.getElementById('contenuTache');
+      if (type === 'hebdo') {
+        contenu.innerHTML = "📅 Voici vos tâches hebdomadaires.";
+      } else if (type === 'jour') {
+        contenu.innerHTML = "🗓️ Voici vos tâches journalières.";
+      } else {
+        contenu.innerHTML = "🧾 Voici toutes vos tâches.";
+      }
+    }
+  </script>
 
     </div>
   </ul>
@@ -117,7 +99,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Planning Hebdomadaire</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./Booststrap_boot_1/css/bootstrap.css" rel="stylesheet">
   <style>
     body { padding: 20px; }
     .day-column { min-height: 200px; border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; }
@@ -245,6 +227,7 @@
   <script>
     
   </script>
+  
   <footer>&copy;gerer vos taches hebdomadaire</footer>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Profil</title>
+  <link href="./Booststrap_boot_1/css/bootstrap.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h2 class="text-center">👤 Mon Profil</h2>
+    <div id="profileInfo" class="mt-4"></div>
+    <div class="text-center mt-4">
+      <button class="btn btn-danger" id="logoutBtn">Se déconnecter</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const profileData = JSON.parse(localStorage.getItem("userProfile"));
+
+if (profileData) {
+  document.getElementById("profileInfo").innerHTML = `
+    <p><strong>Nom :</strong> ${profileData.name || "Non défini"}</p>
+    <p><strong>Email :</strong> ${profileData.email}</p>
+    <p><strong>Profil créé le :</strong> ${profileData.createdAt}</p>
+  `;
+} else {
+  // Si pas de profil, retour à la connexion
+  window.location.href = "connexion.html";
+}
+
+document.getElementById("logoutBtn").addEventListener("click", () => {
+  localStorage.removeItem("userProfile");
+  window.location.href = "connexion.html";
+});
+</script>
+
+</body>
+</html>
