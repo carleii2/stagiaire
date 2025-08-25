@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Gestion Diagnostics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <center><h1>💼 Gestion des Diagnostics</h1></center>
+   <div>
+  <form id="client">
+
+     <center><h2>Informations Client</h2></center>
+
+    <input type="text" id="nom" placeholder="Nom du client" required>
+    <input type="number" id="contact" placeholder="Téléphone" required>
+
+      <center><h3>📔 Details Diagnostics</h3></center>
+
+    <input type="text" id="Nom_appareil" placeholder="Type appareil" required>
+    <input type="text" id="Marque" placeholder="Marque" required>
+    <input type="text" id="serie_appareil" placeholder="serie_appareil" required>
+    <textarea id="diagnostic" placeholder="Diagnostic effectué" required></textarea>
+    <textarea id="Recommandations" placeholder="Recommandations" required></textarea>
+    <button type="submit">💾 Enregistrer</button>
+    <center><button type="button" id="vider">vider la Liste</button></center>
+  </form>
+  </div>
+      
+    
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Où allez-vous ?</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #11414f;
+      color: white;
+    }
+    .section {
+      background-color: #11414f;
+      color: white;
+      padding: 30px 0;
+      border-radius: 0 0 20px 20px;
+    }
+    .trajet-card {
+      background: #f7f7f7;
+      color: #000;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+    .trajet-card:hover {
+      background: #e3e3e3;
+    }
+    .arrow {
+      font-size: 20px;
+      margin-left: 10px;
+      color: #11414f;
+       
+    }
+  </style>
+</head>
+<body>
+
+<div class="container text-center section">
+  <h2 class="mb-4">Où allez-vous ?</h2>
+  <div class="row justify-content-center g-4">
+    <!-- Carte 1 -->
+    <div class="col-md-3">
+      <div class="trajet-card" onclick="changerDestination('trajet1')">
+        <span id="trajet1">Lille → Paris</span> <span class="arrow">➔</span>
+      </div>
+    </div>
+
+    <!-- Carte 2 -->
+    <div class="col-md-3">
+      <div class="trajet-card" onclick="changerDestination('trajet2')">
+        <span id="trajet2">Paris → Lyon</span> <span class="arrow">➔</span>
+      </div>
+    </div>
+
+    <!-- Carte 3 -->
+    <div class="col-md-3">
+      <div class="trajet-card" onclick="changerDestination('trajet3')">
+        <span id="trajet3">Reims → Paris</span> <span class="arrow">➔</span>
+      </div>
+    </div>
+  </div>
+  <p class="mt-4 text-info">Nos top trajets</p>
+</div>
+
+<script>
+  const trajets = {
+    trajet1: ["Lille → Paris", "Lille → Lyon", "Lille → Marseille"],
+    trajet2: ["Paris → Lyon", "Paris → Bordeaux", "Paris → Nice"],
+    trajet3: ["Reims → Paris", "Reims → Lille", "Reims → Nantes"]
+  };
+
+  const indexTracker = {
+    trajet1: 0,
+    trajet2: 0,
+    trajet3: 0
+  };
+
+  function changerDestination(id) {
+    indexTracker[id] = (indexTracker[id] + 1) % trajets[id].length;
+    document.getElementById(id).textContent = trajets[id][indexTracker[id]];
+  }
+</script>
+
+</body>
+</html>

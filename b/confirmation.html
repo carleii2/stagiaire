@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmation Client</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./full_style.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+      max-width: 500px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+   <nav class="navbar">
+    <div class="logo">FeelingCar🚗</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="info.html"> chauffeur</a></li>
+      <li><a href="confirmation.html">consulter</a></li>
+      <li><a href="chris.html">Mon compte</a></li>
+    </ul>
+  </nav>
+  <div class="card shadow">
+    <div class="card-body">
+      <h4 class="card-title text-center">✅ Informations enregistrées</h4>
+      <p><strong>Nom :</strong> <span id="displayName"></span></p>
+      <p><strong>Nombre de passagers :</strong> <span id="displayPassengers"></span></p>
+      <p><strong>Numéro de téléphone :</strong> <span id="displayPhone"></span></p>
+    </div>
+  </div>
+  
+
+  <script>
+    // Récupération des données depuis le LocalStorage
+    const data = JSON.parse(localStorage.getItem("clientData"));
+
+    // Vérification et affichage
+    if (data) {
+      document.getElementById("displayName").textContent = data.nom;
+      document.getElementById("displayPassengers").textContent = data.passagers;
+      document.getElementById("displayPhone").textContent = data.telephone;
+    } else {
+      document.querySelector(".card-body").innerHTML = "<p class='text-danger'>Aucune donnée trouvée.</p>";
+    }
+    window.location.href = "confirmation.html";
+    
+</script>
+
+
+     
+  
+</body>
+</html>

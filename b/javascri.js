@@ -1,0 +1,24 @@
+
+function saveClientData() {
+  const name = document.getElementById("name").value.trim();
+  const passengers = document.getElementById("passengers").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+
+  if (name && passengers && phone) {
+    const clientInfo = {
+      nom: name,
+      passagers: passengers,
+      telephone: phone
+    };
+
+    localStorage.setItem("clientData", JSON.stringify(clientInfo));
+    alert("✅ Informations enregistrées !");
+    // Redirection possible ici : window.location.href = "page-suivante.html";
+  } else {
+    alert("⚠️ Veuillez remplir tous les champs.");
+  }
+}
+let data = JSON.parse(localStorage.getItem("clientData"));
+console.log(data.nom, data.passagers, data.telephone);
+
+
