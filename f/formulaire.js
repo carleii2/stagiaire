@@ -13,7 +13,7 @@ function connecterCommercant() {
     alert("Mot de passe incorrect.");
   }
     if (commercant.password == password) {
-    alert("Mot de passe correct.");
+    alert("connexion reussi✔✔✔.");
     window.location.href = "AJOUT PRODUIT.HTML";
     }
   document.getElementById("nomCommercant").textContent = commercant.nom;
