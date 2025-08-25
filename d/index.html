@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Gestion Diagnostics</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Accueil - Gestionnaire de Diagnostics</title>
+  <link rel="stylesheet" href="pageA.css">
 </head>
 <body>
-  <center><h1>💼 Gestion des Diagnostics</h1></center>
-   <div>
-  <form id="client">
 
-     <center><h2>Informations Client</h2></center>
+  <header>
+    <h1>🔧 Gestionnaire de Diagnostics</h1>
+    <p>Bienvenue ! Gérez vos clients, vos appareils et vos diagnostics en toute simplicité.</p>
+  </header>
 
-    <input type="text" id="nom" placeholder="Nom du client" required>
-    <input type="number" id="contact" placeholder="Téléphone" required>
-
-      <center><h3>📔 Details Diagnostics</h3></center>
-
-    <input type="text" id="Nom_appareil" placeholder="Type appareil" required>
-    <input type="text" id="Marque" placeholder="Marque" required>
-    <input type="text" id="serie_appareil" placeholder="serie_appareil" required>
-    <textarea id="diagnostic" placeholder="Diagnostic effectué" required></textarea>
-    <textarea id="Recommandations" placeholder="Recommandations" required></textarea>
-    <button type="submit">💾 Enregistrer</button>
-    <center><button type="button" id="vider">vider la Liste</button></center>
-  </form>
+  <div class="btn-container">
+    <a href="voir.html" class="btn">📋 Voir les diagnostics</a>
+    <a href="ajouter.html" class="btn">➕ Ajouter un diagnostic</a>
   </div>
-      
-    
-  <script src="script.js"></script>
+
+  <footer>
+    &copy; 2025 -  Gerer vos taches en toute simplicité
+  </footer>
+
 </body>
 </html>
