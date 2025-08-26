@@ -13,6 +13,6 @@ function anderson() {
     }
     if(commercant.password == password){
         alert("connexion reussi✅.");
-     window.location.href = "loader2.html";
+     window.location.href = "./loader2.html";
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
-    <script src="Booststrap_boot_1/css/bootstrap.css"></script>
+    <script src="./Booststrap_boot_1/css/bootstrap.css"></script>
 </head>
 <body>
     <style>
@@ -70,10 +70,27 @@
   font-size: 1rem;
   color: #2c3e50;
 }
+.dropdown-item{
+  margin-top: 10px;
+  color: #007bff;
+  height: 30px;
+  width: 40px;
+}
+button{
+  background-color: white;
+  margin: 30px;
+  border-radius: 10px;
+  height: 40px;
+  color: blue;
+  cursor: pointer;
+  
+}
+
 
     </style>
     <section id="contact" class="py-5 bg-light">
   <div class="container">
+    <button><a class="dropdown-item" href="loader2.html" onclick="afficherTache('tous')">◄RETOUR</a></button>
     <h2 class="text-center mb-4">Contactez-nous</h2>
     <p class="text-center mb-5">
       Une question, une suggestion ou simplement envie de dire bonjour ? Nous sommes ravis d’échanger avec vous !
@@ -103,6 +120,6 @@
     </div>
   </div>
 </section>
-<script src="Booststrap_boot_1/js/bootstrap.js"></script>
+<script src="./Booststrap_boot_1/js/bootstrap.js"></script>
 </body>
 </html>

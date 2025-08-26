@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Connexion</title>
-  <link href="Booststrap_boot_1/css/bootstrap.css" rel="stylesheet">
+  <link href="./Booststrap_boot_1/css/bootstrap.css" rel="stylesheet">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
@@ -54,7 +54,7 @@ img {
   <div class="container d-flex justify-content-center align-items-center vh-100" class="loader">
     <div class="card p-4 shadow-sm" style="width: 100%; max-width: 400px;">
       <h4 class="text-center mb-4">🔐 Connexion</h4>
-      <form id="loginForm">
+      <form id="loginForm" onsubmit="savedata(event)">
         <div class="mb-3">
           <label for="email" class="form-label">Adresse e-mail</label>
           <input type="email" class="form-control" id="email" placeholder="exemple@mail.com" required>
@@ -78,8 +78,11 @@ img {
   </div>
   </center>
 
-  <script src="Booststrap_boot_1/js/bootstrap.js"></script>
+  <script src="./Booststrap_boot_1/js/bootstrap.js"></script>
 <script src="connexion.js"></script>
+<script>
+
+</script>
 
 </body>
 </html>
