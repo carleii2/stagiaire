@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Home🏠</title>
+    <link rel="stylesheet" href="../css/bootstap.css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style5e1f.css">
+    <link rel="stylesheet" href="../css/expresshome_bailleur.css">
+</head>
+
+<body style="background-color: white;">
+    <div class="symbol">
+        <nav class="navbar fixed-top p-3 textwhite" style="background-color: blueviolet;">
+            <div class="symbol">Express home🏠</div>
+            <div class="d-none d-sm-block">
+                <a href="index.html">Accueil</a>
+                <a href="expresshome_inscription.html" class="Express">Inscription</a>
+                <a href="expresshome_bailleur.html" class="Express">Bailleurs</a>
+                <a href="espresshome_locataire.html" class="Express">Locataires</a>
+                <a href="expresshome_conseils.html" class="Express" style="text-decoration-color: none;">Conseils</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <main class="appCapsule mb-4" style="margin-top: 90px; background-color: rgb(255, 255, 255);">
+
+        <div class="col">
+            <h3>Dernier logement demandé</h3>
+        </div>
+        <div class="col-md-5 mb-4 ml-5" style="color: black;" id="demandés">
+
+        </div>
+
+
+        <div class="col">
+            <h3>➕ Ajoutez un logement</h3>
+        </div>
+
+        <center>
+            <div class="formulaire">
+                <input type="text" id="ville" placeholder="Ville">
+                <input type="text" id="prix" placeholder="Prix">
+                <input type="text" id="description" placeholder="Description du logement">
+                <input type="number" id="numero" placeholder="Numero mobile">
+                <input type="file" id="imageInput" accept="image/*">
+                <button onclick="ajoutLogement()">Ajouter</button>
+                <button onclick="supLogement()" id="supprimer">Supprimer</button>
+            </div>
+        </center>
+
+    </main>
+
+    <!-- footer desktop -->
+    <footer class=" d-none d-sm-block fixed-bottom"
+        style="background-color: black; color: rgb(255, 255, 255); padding: 20px;">
+        <a style="margin-left: 90px;">&copy Express home🏠</a>
+        <a class="ft">Copiright 2025</a>
+        <a class="ft">Contactez nous au 655 01 59 01</a>
+
+    </footer>
+
+    <!-- appbottom phone -->
+    <!-- <div class="appBottomMenu fixed-bottom d-block d-md-none d-none d-flex justify-content-around d-wrap-none" style="background-color: blueviolet;  
+        justify-content: space-between; border-radius: 10px;"> -->
+    <center>
+        <div class="appBottomMenu fixed-bottom d-block d-md-none d-none  d-wrap-none" style="background-color: blueviolet;  
+         justify-content: space-between; padding: 20px; border-radius: 10px;">
+            <div class="item">
+                <a href="index.html" style="color: white; font-size: 13px;">Accueil</a>
+                <a class="in" href="expresshome_inscription.html" style="color: white; font-size:13px;">Inscription</a>
+                <a class="in" href="expresshome_bailleur.html" style="color: white; font-size: 13px;">Bailleurs</a>
+                <a class="in" href="espresshome_locataire.html" style="color: white; font-size: 13px;">Locataires</a>
+                <a class="in" href="expresshome_conseils.html" style="color: white; font-size: 13px;">Conseils</a>
+            </div>
+        </div>
+        <center>
+            </main>
+</body>
+
+<script src="../javascript/js/bootstrap.bundle.js"></script>
+<script>
+
+    // function afficherLocataires() {
+    //     // Récupérer la liste depuis le localStorage
+    //     const locataires = JSON.parse(localStorage.getItem('locataires')) || [];
+    //     // Sélectionner l'élément où afficher la liste
+    //     const listeDiv = document.getElementById('listeLocataires');
+    //     if (!listeDiv) return;
+
+
+    //     alert("listes")
+    //     // Vérifier s'il y a des locataires
+    //     if (locataires.length === 0) {
+    //         listeDiv.innerHTML = "<p>Aucun locataire enregistré.</p>";
+    //     } else {
+    //         // Créer une liste HTML
+    //         let html = "<ul>";
+    //         locataires.forEach((locataire) => {
+    //             html += `<li>
+    //                 <strong>Nom:</strong> ${locataire.name} <br>
+    //                 <strong>Téléphone:</strong> ${locataire.tel} <br>
+    //                 <strong>Statut:</strong> ${locataire.stat} <br>
+    //                 <strong>Mot de passe:</strong> ${locataire.motpasse}
+    //             </li><br>`;
+    //         });
+    //         html += "</ul>";
+    //         listeDiv.innerHTML = html;
+    //     }
+    //     alert("Reussi!!!")
+    // }
+    // window.onload = afficherLocataires;
+    // // localStorage.setItem('locataires', JSON.stringify(locataires));
+
+
+
+
+    window.addEventListener("load", function () {
+        let data = JSON.parse(localStorage.getItem("locataires"));
+
+        if (Array.isArray(data) && data.length > 0) {
+            let derniereLigne = data[data.length - 1];
+            let locataires = localStorage.getItem(`locataires`);
+            x = JSON.parse(locataires);
+            i=data.length-1;
+            let value = x[i];
+            console.log(value);
+            let taille = locataires.length;
+            a = document.createElement("div");
+            a.innerHTML = `
+            <p><strong>Nom :</strong><span>${value.name}</span></p>
+            <p><strong>Numero mobile :</strong><span>${value.tel}</span></p>
+            <p><strong>Statut :</strong><span>${value.stat}</span></p>
+            <p><strong>Mot de passe :</strong><span>${value.motpasse}</span></p>`
+            document.getElementById("demandés").appendChild(a);
+        } else {
+            console.log("Le tableau est vide ou invalide.");
+        }
+    });
+
+    function supLogement() {
+        let logements = JSON.parse(localStorage.getItem("logements")) || [];
+
+        if (logements.length > 0) {
+            logements.pop(); // Supprime le dernier élément du tableau
+            localStorage.setItem("logements", JSON.stringify(logements));
+            alert("Dernier logement supprimé !");
+        } else {
+            alert("Aucun logement à supprimer.");
+        }
+    }
+
+    // function supLogement() {
+    //     let taille = JSON.parse(localStorage.getItem("logements")).length;
+    //     taille = taille - 1;
+    //     // let logements = JSON.parse(localStorage.getItem("logements"));
+    //     // delete logements["1"];
+    //     localStorage.removeItem(1);
+    //     alert("reussi");
+    // }
+
+
+    function ajoutLogement() {
+        const ville = document.getElementById('ville').value;
+        const prix = document.getElementById('prix').value;
+        const description = document.getElementById('description').value;
+        const numero = document.getElementById('numero').value;
+        const imageInput = document.getElementById('imageInput');
+        const fichier = imageInput.files[0];
+
+        if (!ville || !prix || !description || !numero || !fichier) {
+            alert("Veuillez remplir tous les champs.");
+            return;
+        }
+
+        const lecteur = new FileReader();
+        lecteur.onload = function () {
+            const imageBase64 = lecteur.result;
+            const logement = { ville, prix, description, numero, image: imageBase64 };
+
+            const logements = JSON.parse(localStorage.getItem('logements')) || [];
+            logements.push(logement);
+            localStorage.setItem('logements', JSON.stringify(logements));
+
+            window.location.href = "espresshome_locataire.html";
+        };
+
+        lecteur.readAsDataURL(fichier);
+    }
+
+</script>
+
+</html>
+
+<!-- //let users = [[" "," "," "," "]]
+//let T = users.length
+// users[T-1][O] = "nom"
+// users[T-1][1] = "num"
+// users[T-1][2] = "statut"
+// users[T-1][3] = "password"
+// localStorage.setItem("savedata", JSON.stringify(locataireInfo));
+
+// for (let user of users){
+// alert(user[0]);
+// alert(user[1]);
+// alert(user[2]);
+// alert(user[3]);
+// }
+// localStorage.getItem("savedata",JSON.parse(locataireInfo));
+
+
+// //Recuperation des infos depuis le local storage
+// const data = JSON.parse(localStorage.getItem("locataireInfo"));
+
+// //Verification et affichage//
+
+// if (data) {
+// document.getElementById("displayName").textContent = data.nom;
+// document.getElementById("displayNum").textContent = data.nom;
+// document.getElementById("displayStatut").textContent = data.nom;
+// document.getElementById("displayPassword").textContent = data.nom;
+
+
+// } else {
+// document.querySelector(".card-body").innerHTML = "<p class='text-danger'>Aucune donnée trouvée.</p>";
+// }
+// window.location.href = "expresshome_bailleur.html" -->

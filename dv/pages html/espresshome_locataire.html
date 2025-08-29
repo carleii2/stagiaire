@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express home🏠</title>
+    <link rel="stylesheet" href="../css/bootstap.css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style5e1f.css">
+    <link rel="stylesheet" href="../css/espresshome_locataire.css">
+    <!-- <link rel="stylesheet" href="../css/espresshome_locataire.css"> -->
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <div class="">
+        <nav class="navbar fixed-top p-3 textwhite" style="background-color: blueviolet;">
+            <div class="symbol">Express home🏠</div>
+            <div class="d-none d-sm-block">
+                <a href="index.html">Accueil</a>
+                <a href="expresshome_inscription.html" class="Express">Inscription</a>
+                <a href="expresshome_bailleur.html" class="Express">Bailleurs</a>
+                <a href="espresshome_locataire.html" class="Express">Locataires</a>
+                <a href="expresshome_conseils.html" class="Express" style="text-decoration-color: none;">Conseils</a>
+            </div>
+            <!-- <input class="d-block d-md-none w-50 mt-1 p-1" type="search" class="col col-md-4"
+             name="rechercher" placeholder="Recherchez vos maisons ici" style="border-radius: 50px;">-->
+
+            <!-- barre de recherche pour telephone -->
+            <input type="text" id="searchBar"
+                class="form-control w-50 mx-auto mb-3 d-block d-md-none d-sm-block mt-1 p-1"
+                placeholder="🔍Rechercher une ville..." style="border-radius: 50px;justify-content: center;">
+        </nav>
+    </div>
+
+    <!-- main/contenu -->
+
+    <main class="appCapsule mb-4 " style="margin-top: 90px">
+
+        <center> <!-- <input class="d-none d-sm-block w-50 mt-3 p-3" type="search" class="col col-md-4" name="rechercher" 
+            placeholder="🔍Recherchez vos maisons ici" style="border-radius: 50px;">--></center>
+
+        <!-- barre de recherche pour ordinateur -->
+        <input type="text" id="searchBar" class="form-control w-50 mx-auto mb-4 d-none d-sm-block mt-3 p-3"
+            placeholder="🔍Rechercher une ville..." style="border-radius: 50px;">
+
+        <!-- Message apres mauvaise recherche -->
+        <p id="noResults" class="text-center text-danger" style="display: none;">Aucun logement trouvé pour cette ville.
+        </p>
+
+        <!-- <table>
+        <tr>
+            <td><img src="" alt="Maison a louer"></td>
+        </tr>
+        <tr>
+            <td>Prix:</td>
+        </tr>
+        <tr>
+            <td>Ville:</td>
+        </tr>
+    </table> -->
+        <center>
+            <div class="container py-5">
+                <h2 class="text-center mb-4"
+                    style="color: black; font-weight: bold; font-style: italic; color: rgb(165, 82, 244);">
+                    LISTE DES LOGEMENTS DISPONIBLES</h2>
+                <div class="row justify-content-center" id="">
+                    <div class="col-md-5 mb-4" data-ville="KRIBI">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison22.jfif" class="card-img-top" alt="Ville 2">
+                                    <div class="card-body">
+                                        <p class="card-title">💧KRIBI/Antenne Orange</p>
+                                        <p class="card-text"> 💰Prix : 30.000Fcfa</p>
+                                        <p class="card-text">🏠Description : Chambre moderne avec douche.</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4" data-ville="KRIBI">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison10.jpg" class="card-img-top" alt="Ville 3">
+                                    <div class="card-body">
+                                        <p class="card-title">💧KRIBI/Petit-paris</p>
+                                        <p class="card-text"> 💰Prix : 200.000Fcfa</p>
+                                        <p class="card-text">🏰Description : Duplex avec Wifi.</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Yaounde">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison11.jpg" class="card-img-top" alt="Ville 4">
+                                    <div class="card-body">
+                                        <p class="card-title">🚆Yaounde</p>
+                                        <p class="card-text"> 💰Prix : 150.000Fcfa</p>
+                                        <p class="card-text">🏪Description : Villa avec 3 douches+baignoir</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Limbe">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison15.jpg" class="card-img-top" alt="Ville 4">
+                                    <div class="card-body">
+                                        <p class="card-title">⛲Limbe</p>
+                                        <p class="card-text"> 💰Prix : 250.000Fcfa la journée</p>
+                                        <p class="card-text">🏙 Description : Palace de conference</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Baffoussam">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison18.jpg" class="card-img-top" alt="Ville 4">
+                                    <div class="card-body">
+                                        <p class="card-title">🌄 Baffoussam</p>
+                                        <p class="card-text"> 💰Prix : 150.000Fcfa</p>
+                                        <p class="card-text">🏬Description : Maison avec parking</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Douala">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison5.jpg" class="card-img-top" alt="Ville 1">
+                                    <div class="card-body">
+                                        <p class="card-title">🛒Douala/Bepanda</p>
+                                        <p class="card-text">💰 Prix : 100.000Fcfa</p>
+                                        <p class="card-text"> 🏢Description : Appartement meublé</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="KRIBI">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison6.jpg" class="card-img-top" alt="Ville 2">
+                                    <div class="card-body">
+                                        <p class="card-title">💧KRIBI/Antenne Orange</p>
+                                        <p class="card-text"> 💰Prix : 30.000Fcfa</p>
+                                        <p class="card-text">🏠Description : Chambre moderne avec douche.</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="KRIBI">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison7.jpg" class="card-img-top" alt="Ville 3">
+                                    <div class="card-body">
+                                        <p class="card-title">💧KRIBI/Petit-paris</p>
+                                        <p class="card-text"> 💰Prix : 200.000Fcfa</p>
+                                        <p class="card-text">🏰Description : Duplex avec Wifi.</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Yaounde">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison8.jpg" class="card-img-top" alt="Ville 4">
+                                    <div class="card-body">
+                                        <p class="card-title">🚆Yaounde</p>
+                                        <p class="card-text"> 💰Prix : 150.000Fcfa</p>
+                                        <p class="card-text">🏪Description : Villa avec 3 douches+baignoir</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Limbe">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison9.jpg" class="card-img-top" alt="Ville 4">
+                                    <div class="card-body">
+                                        <p class="card-title">⛲Limbe</p>
+                                        <p class="card-text"> 💰Prix : 250.000Fcfa la journée</p>
+                                        <p class="card-text">🏙 Description : Palace de conference</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Baffoussam">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison14.jpg" class="card-img-top" alt="Ville 4">
+                                    <div class="card-body">
+                                        <p class="card-title">🌄 Baffoussam</p>
+                                        <p class="card-text"> 💰Prix : 150.000Fcfa</p>
+                                        <p class="card-text">🏬Description : Maison avec parking</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Douala">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison19.jfif" class="card-img-top" alt="Ville 1">
+                                    <div class="card-body">
+                                        <p class="card-title">🛒Douala/Bepanda</p>
+                                        <p class="card-text">💰 Prix : 100.000Fcfa</p>
+                                        <p class="card-text"> 🏢Description : Appartement meublé</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="KRIBI">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison20.jfif" class="card-img-top" alt="Ville 2">
+                                    <div class="card-body">
+                                        <p class="card-title">💧KRIBI/Antenne Orange</p>
+                                        <p class="card-text"> 💰Prix : 30.000Fcfa</p>
+                                        <p class="card-text">🏠Description : Chambre moderne avec douche.</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="KRIBI">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison21.jfif" class="card-img-top" alt="Ville 3">
+                                    <div class="card-body">
+                                        <p class="card-title">💧KRIBI/Petit-paris</p>
+                                        <p class="card-text"> 💰Prix : 200.000Fcfa</p>
+                                        <p class="card-text">🏰Description : Duplex avec Wifi.</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Yaounde">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison23.jfif" class="card-img-top" alt="Ville 4">
+                                    <div class="card-body">
+                                        <p class="card-title">🚆Yaounde</p>
+                                        <p class="card-text"> 💰Prix : 150.000Fcfa</p>
+                                        <p class="card-text">🏪Description : Villa avec 3 douches+baignoir</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Limbe">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison24.jfif" class="card-img-top" alt="Ville 4">
+                                    <div class="card-body">
+                                        <p class="card-title">⛲Limbe</p>
+                                        <p class="card-text"> 💰Prix : 250.000Fcfa la journée</p>
+                                        <p class="card-text">🏙 Description : Palace de conference</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="Baffoussam">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison25.jfif" class="card-img-top" alt="Ville 4">
+                                    <div class="card-body">
+                                        <p class="card-title">🌄 Baffoussam</p>
+                                        <p class="card-text"> 💰Prix : 150.000Fcfa</p>
+                                        <p class="card-text">🏬Description : Maison avec parking</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-5 mb-4 logement" data-ville="KRIBI">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="../images/maison26.jfif" class="card-img-top" alt="Ville 2">
+                                    <div class="card-body">
+                                        <p class="card-title">💧KRIBI/Antenne Orange</p>
+                                        <p class="card-text"> 💰Prix : 30.000Fcfa</p>
+                                        <p class="card-text">🏠Description : Chambre moderne avec douche.</p>
+                                        <p class="card-text">📱Numero mobile: 655 01 59 01</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-5" style="margin-top: 20px;">
+                <div class="row" id="logements"></div>
+        </div>
+        </center>
+    </main>
+    <!-- footer desktop -->
+    <footer class=" d-none d-sm-block fixed-bottom"
+        style="background-color: black; color: rgb(255, 255, 255); padding: 20px;">
+        <a style="margin-left: 90px;">&copy Express home🏠</a>
+        <a class="ft">Copiright 2025</a> 
+        <a class="ft">Contactez nous au 655 01 59 01</a>
+
+    </footer>
+    <!-- appbottom phone -->
+    <center>
+        <div class="appBottomMenu fixed-bottom d-block d-md-none d-none d-flex justify-content-around d-wrap-none"
+            style="background-color: blueviolet;  
+            justify-content: space-between; padding: 20px; border-radius: 10px;">
+            <div class="item">
+                <a href="index.html" style="color: white; font-size: 13px;">Accueil</a>
+                <a class="in" href="expresshome_inscription.html" style="color: white; font-size:13px;">Inscription</a>
+                <a class="in" href="expresshome_bailleur.html" style="color: white; font-size: 13px;">Bailleurs</a>
+                <a class="in" href="espresshome_locataire.html" style="color:white ; font-size: 13px;">Locataires</a>
+                <a class="in" href="expresshome_conseils.html" style="color: white; font-size: 13px;">Conseils</a>
+            </div>
+        </div>
+    </center>
+    </main>
+</body>
+
+<script src="../javascript/js/bootstrap.bundle.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchBars = document.querySelectorAll('#searchBar');
+        const logements = document.querySelectorAll('.logement');
+        const noResults = document.getElementById('noResults');
+
+        searchBars.forEach(searchBar => {
+            searchBar.addEventListener('input', function () {
+                const query = this.value.toLowerCase().trim();
+                let matchCount = 0;
+
+                logements.forEach(logement => {
+                    const ville = logement.getAttribute('data-ville').toLowerCase();
+                    if (ville.includes(query)) {
+                        logement.style.display = 'block';
+                        matchCount++;
+                    } else {
+                        logement.style.display = 'none';
+                    }
+                });
+
+                noResults.style.display = matchCount === 0 ? 'block' : 'none';
+                // Affiche le message: Aucun resultat a votre recherche//
+            });
+        });
+    });
+    // Fonction permettant dafficher les logements
+    // function afficherLogements() {
+    window.addEventListener("load", function () {
+        const logements = JSON.parse(localStorage.getItem('logements'));
+
+        const conteneur = document.getElementById('logements');
+        conteneur.innerHTML = "logements"; // Nettoyer avant d'ajouter
+
+        logements.forEach(logement => {
+            const carte = document.createElement('div');
+            carte.innerHTML =
+                `   
+                    
+                    <div class="col-md-6 mb-4" data-ville="${logement.ville}">
+                        <a href="expresshome_inscription.html">
+                            <div class="img">
+                                <div class="card h-100">
+                                    <img src="${logement.image}" class="card-img-top" alt="Ville">
+                                    <div class="card-body">
+                                        <p class="card-title">💧${logement.ville}</p>
+                                        <p class="card-text"> 💰Prix : ${logement.prix}Fcfa</p>
+                                        <p class="card-text">🏠Description : ${logement.description}.</p>
+                                        <p class="card-text">📱Numero : ${logement.numero}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+        `;
+            conteneur.appendChild(carte);
+        });
+    });
+
+
+
+
+
+    // // Appeler la fonction au chargement de la page
+    // window.onload = afficherLogements;
+
+</script>
+
+</html>

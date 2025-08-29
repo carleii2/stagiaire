@@ -1,0 +1,84 @@
+h4{
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+}
+
+h2{
+    font-weight: bolder;
+    font-style: italic;
+    color: rgb(135, 34, 189);
+    text-align: center;
+
+}
+
+.navbar {
+  background-color: blueviolet;
+  color: rgb(255, 255, 255);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.nav-at {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-at li a:hover {
+  color: #1ee481;
+}
+
+.nav-at li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+footer{
+  background-color: blueviolet;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  
+}
+.foot{
+  color: white;
+}
+a
+{
+  color: white;
+   margin-left: 35px;
+}
+.item a{
+   margin-left: 10px;
+}
+ a:hover {
+   color: rgb(193, 171, 243);
+   text-decoration: none;
+
+ }
+
+.card-title {
+  font-weight: bold;
+  color: #000000;
+}
+
+.card-text {
+  color: #000000;
+}
+.ft{
+  margin-left: 200px;
+}

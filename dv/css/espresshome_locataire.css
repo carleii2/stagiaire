@@ -1,0 +1,84 @@
+.rechercher {
+  color: white;
+}
+
+.navbar {
+  background-color: blueviolet;
+  color: rgb(255, 255, 255);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.nav-at {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  color: #1ee481;
+}
+
+.nav-at li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+footer{
+  background-color: blueviolet;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  
+}
+.foot{
+  color: white;
+}
+.item a
+{
+  margin-left: 10px;
+}
+a{
+  color: white;
+  margin-left: 75px;
+}
+ a:hover {
+   color: rgb(193, 171, 243);
+   text-decoration: none;
+
+ }
+
+.card-title {
+  font-weight: bold;
+  color: #000000;
+}
+
+.card-text {
+  color: #000000;
+}
+.img
+{
+  border-radius: 5px;
+  border: solid 5px;
+  border-color: rgb(118, 13, 128);
+  justify-content:center;
+  gap: 10px;
+  height: 450px;
+}
+.card-img-top{
+  height: 250px;
+  cursor: pointer;
+  object-fit: cover;
+}
+.ft{
+  margin-left: 200px;
+}
